@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* NikishkinTestWork.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* NikishkinTestWork.m */; };
-		F4FF95D7245B92E800C19C63 /*  NikishkinTestWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  NikishkinTestWork.swift */; };
+		F4FF95D7245B92E800C19C63 /* NikishkinTestWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* NikishkinTestWork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libNikishkinTestWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNikishkinTestWork.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		691CBA3A28B2C6A600EF7263 /* react-native */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "react-native"; path = "../node_modules/react-native"; sourceTree = "<group>"; };
+		691CBA3C28B2C6CB00EF7263 /* React-RCTFabric.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = "React-RCTFabric.podspec"; path = "../node_modules/react-native/React/React-RCTFabric.podspec"; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* NikishkinTestWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NikishkinTestWork.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* NikishkinTestWork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NikishkinTestWork-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* NikishkinTestWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NikishkinTestWork.swift; sourceTree = "<group>"; };
@@ -56,7 +57,17 @@
 				B3E7B5891CC2AC0600A0062D /* NikishkinTestWork.m */,
 				F4FF95D5245B92E700C19C63 /* NikishkinTestWork-Bridging-Header.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				691CBA3928B2C6A600EF7263 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		691CBA3928B2C6A600EF7263 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				691CBA3C28B2C6CB00EF7263 /* React-RCTFabric.podspec */,
+				691CBA3A28B2C6A600EF7263 /* react-native */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +128,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FF95D7245B92E800C19C63 /* NikishkinTestWork.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* NikishkinTestWork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

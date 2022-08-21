@@ -1,14 +1,8 @@
-#import <React/RCTBridgeModule.h>
+#import <Foundation/Foundation.h>
+#import "React/RCTBridgeModule.h"
+#import "React/RCTEventEmitter.h"
 
-@interface RCT_EXTERN_MODULE(NikishkinTestWork, NSObject)
-
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
-
-+ (BOOL)requiresMainQueueSetup
-{
-  return NO;
-}
-
+@interface RCT_EXTERN_MODULE(NikishkinTestWork, RCTEventEmitter)
+RCT_EXTERN_METHOD(onChangeText: (RCTPromiseResolveBlock)callback)
+RCT_EXTERN_METHOD(changeText: (NSString)value)
 @end

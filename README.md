@@ -9,20 +9,18 @@ npm install react-native-nikishkin-test-work
 ## Usage
 
 ```js
-import { multiply } from "react-native-nikishkin-test-work";
+import {
+  NikishkinTestWork,
+  NikishkinTestWorkEvent,
+  EventType,
+} from 'react-native-nikishkin-test-work';
 
-// ...
+NikishkinTestWork.changeText('text');
 
-const result = await multiply(3, 7);
+NikishkinTestWorkEvent.addListener(EventType.onChangeText, (res) => {
+  console.log(res);
+});
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
 
 ---
 

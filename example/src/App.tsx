@@ -1,18 +1,35 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-nikishkin-test-work';
+import { StyleSheet, View, Text, Button } from 'react-native';
+import {
+  NikishkinTestWork,
+  NikishkinTestWorkEvent,
+  EventType,
+} from 'react-native-nikishkin-test-work';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = useState<string>('');
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+  useEffect(() => {
+    NikishkinTestWorkEvent.addListener(EventType.onChangeText, (res) => {
+      setResult(res);
+    });
+    setTimeout(() => {
+      NikishkinTestWork.changeText('default');
+    }, 3000);
+    return () => {
+      NikishkinTestWorkEvent.removeAllListeners(EventType.onChangeText);
+    };
   }, []);
+
+  const changeText = () => {
+    NikishkinTestWork.changeText(result + 'newApp');
+  };
 
   return (
     <View style={styles.container}>
       <Text>Result: {result}</Text>
+      <Button title={'Button'} onPress={changeText} />
     </View>
   );
 }
@@ -22,10 +39,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });
