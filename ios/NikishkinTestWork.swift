@@ -20,7 +20,7 @@ class NikishkinTestWork: RCTEventEmitter {
       hasListeners = false;
       
       NotificationCenter.default.removeObserver(self,
-        name: Notification.Name("userDidLogout"), object: nil)
+        name: Notification.Name("NotificationText"), object: nil)
     }
     
     @objc
